@@ -39,7 +39,7 @@
         
   }
  .container--pad{
-    padding: 96px 0;
+    padding: 46px 0;
  }
   
   .no-cursor{
@@ -126,11 +126,31 @@
     color: #2274A5;
    }
   
-   /*section side to side */
+   /*section  for  moment and  special*/
   .sidetoside{
     display: flex;
     justify-content: space-around;
+    
   } 
+.section--layout{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+  .cocktail--img-container{
+    margin-top: 8px;
+    max-width: 300px;
+    
+    
+    
+  }
+  .instruc{
+    max-width: 350px ;
+  }
+
 
 
   /*Small phones, tablets, large smartphone */ 
