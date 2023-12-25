@@ -150,8 +150,32 @@
   .instruc{
     max-width: 350px ;
   }
+.cocktail__loading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  font-size: 60px;
 
+}
+.cocktail__loading--spinner{
+ display:none;
+}
+.cocktail__loading .cocktail__loading--spinner{
+display: block;
+}
 
+.fa-spinner{
+  animation: rotate 600ms  infinite linear;
+}
+@keyframes rotate{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
 
   /*Small phones, tablets, large smartphone */ 
   @media (max-width: 768px){

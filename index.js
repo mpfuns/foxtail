@@ -3,11 +3,12 @@
  const momentElement= document.querySelector('#moment')
 
    async function randomMoment(){
+    momentElement.classList+= ' cocktail__loading'
      const randomCocktail= await fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
 
      const randomCocktailData=  await randomCocktail.json()
      const oneCocktail= randomCocktailData.drinks
-     console.log(oneCocktail) 
+     momentElement.classList.remove('cocktail__loading')
 
    momentElement.innerHTML= oneCocktail.map(cocktail => cocktailHTML(cocktail)).join("");
     
