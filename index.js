@@ -16,6 +16,30 @@
 
    randomMoment();
 
+
+function characterCheck(event){
+
+let charCode= event.which || event.keyCode;
+let charStr= String.fromCharCode(charCode);
+const regex= /^[a-zA-Z]$/;
+
+if(!regex.test(charStr)){
+  event.preventDefault();
+}
+} 
+
+
+
+
+   function searchCocktail(event){
+    const letter= event.target.value
+    localStorage.setItem('letter', letter)
+    window.location.href=`${window.location.origin}/cocktails.html`
+
+
+
+   }
+
    
     function cocktailHTML(cocktail){
          return `
