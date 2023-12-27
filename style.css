@@ -140,7 +140,7 @@
   text-align: center;
 }
 
-  .cocktail--img-container{
+  .cocktail__img-container{
     margin-top: 8px;
     max-width: 300px;
     
@@ -175,6 +175,42 @@ display: block;
   100%{
     transform: rotate(360deg);
   }
+}
+
+/*Cocktail html page*/
+
+.cocktails-list{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: flex-start; 
+width: 100%;
+margin-bottom: 16px;
+
+
+}
+
+.cocktail__item{
+  margin: 16px;
+  
+  text-align: center;
+}
+
+.space{
+  width: 732px;
+}
+
+
+.found-title{
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+.instruc__max{
+  max-width: 732px;
+}
+.cocktail-list__img-container{
+  max-width: 700px;
 }
 
   /*Small phones, tablets, large smartphone */ 

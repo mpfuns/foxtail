@@ -7,21 +7,28 @@
     <title>Foxtail</title>
     <script src="https://kit.fontawesome.com/db9d36cd20.js" crossorigin="anonymous"></script>
     <link rel="stylesheet"  href="style.css"/>
+    <script defer src="cocktails.js"></script>
 </head>
 <body>
     <nav class="container--row">
-        <figure class="logo-container"><img src="assets/cocktail-logo.jpg" /></figure>   
+       <a href="index.html"><figure class="logo-container"><img src="assets/cocktail-logo-removebg.png" /></figure></a>    
         <div class="search-container">
            <h1 class="search-title">Get a List of Cocktails to try</h1>
                <div class="search-bar">
-                   <input type="text" placeholder="search by first letter" maxlength="1" onkeypress="characterCheck(event)"   >
-                   <button class="search-bar--button" onclick="searchCocktail(event)"><i class="fa-solid fa-magnifying-glass"></i></button>
+                   <input type="text" placeholder="search by first letter" maxlength="1" onkeypress="characterCheck(event)"  onchange="firstLetter(event)"   >
+                   <button class="search-bar--button" onclick="searchCocktail()"><i class="fa-solid fa-magnifying-glass"></i></button>
                </div>
            
         </div>
        </nav>
-       <section  class="cocktails-list">
+       <section id="cockcktails"  >
+        <div class="found-title"> </div>
+        <i class="fa-solid fa-spinner cocktail__loading--spinner"></i>
+        <div class="cocktails-list">
+            
 
+        </div>
+       
 
        </section>
 </body>

@@ -1,6 +1,7 @@
 //www.thecocktaildb.com/api/json/v1/1/random.php
 
  const momentElement= document.querySelector('#moment')
+  let letter="";
 
    async function randomMoment(){
     momentElement.classList+= ' cocktail__loading'
@@ -26,15 +27,19 @@ const regex= /^[a-zA-Z]$/;
 if(!regex.test(charStr)){
   event.preventDefault();
 }
+
 } 
 
+function firstLetter(event ){
+
+letter= event.target.value
+}
 
 
-
-   function searchCocktail(event){
-    const letter= event.target.value
-    localStorage.setItem('letter', letter)
-    window.location.href=`${window.location.origin}/cocktails.html`
+   function searchCocktail(){
+  
+  localStorage.setItem('letter', letter  )
+  window.location.href=`${window.location.origin}/cocktails.html`
 
 
 
@@ -43,7 +48,7 @@ if(!regex.test(charStr)){
    
     function cocktailHTML(cocktail){
          return `
-         <figure class="cocktail--img-container" ><img  src=${cocktail.strDrinkThumb} /></figure>
+         <figure class="cocktail__img-container" ><img  src=${cocktail.strDrinkThumb} /></figure>
             <h3>${cocktail.strDrink} <em>(${cocktail.strAlcoholic})</em></h3>
             <h4>${cocktail.strGlass} is needed</h4>
             
